@@ -23,16 +23,19 @@ This repository is intentionally **partially implemented** to encourage learning
 ## 🧠 Tech Stack
 
 ### Frontend
-- React (Vite)
-- Tailwind CSS
-- React Router
+- React + TypeScript
+- Bun
+- ESLint
+- Tailwind CSS 
 - Chart.js / Recharts (for analytics)
 
 ### Backend
-- Node.js
+- Bun (runtime & package manager)
+- TypeScript
 - Express.js
-- MongoDB + Mongoose
+- PostgreSQL
 - External Threat Intelligence APIs
+
 
 ---
 
@@ -41,30 +44,48 @@ This repository is intentionally **partially implemented** to encourage learning
 ```text
 Cyber-Lens/
 │
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── History.jsx
-│   │   │   └── News.jsx
-│   │   ├── components/
-│   │   ├── App.jsx
-│   │   └── main.jsx
+├── client/
+│   └── cyber_lens/
+│       ├── public/
+│       ├── src/
+│       │   ├── pages/
+│       │   │   ├── Home.tsx
+│       │   │   ├── History.tsx
+│       │   │   └── News.tsx
+│       │   ├── components/
+│       │   ├── App.tsx
+│       │   └── main.tsx
+│       │
+│       ├── index.html
+│       ├── vite.config.ts
+│       ├── eslint.config.js
+│       ├── tsconfig.json
+│       ├── tsconfig.app.json
+│       ├── tsconfig.node.json
+│       ├── package.json
+│       └── bun.lock
 │
-├── backend/
-│   └── src/
-│       ├── config/
-│       │   └── db.js
-│       ├── models/
-│       ├── providers/
-│       ├── services/
-│       ├── routes/
-│       ├── app.js
-│       └── server.js
+├── server/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── db.ts
+│   │   ├── models/
+│   │   ├── providers/
+│   │   ├── services/
+│   │   ├── routes/
+│   │   └── index.ts
+│   │
+│   ├── .env.example
+│   ├── tsconfig.json
+│   ├── package.json
+│   └── bun.lock
 │
 ├── contributors/
 │
+├── LICENSE
+├── .gitignore
 └── README.md
+
 ```
 ## 🧩 Contribution Workflow
 
